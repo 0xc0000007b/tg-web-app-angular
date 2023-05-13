@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:after, *:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;}
+body {
+  background: var(--tg-theme-bg-color);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.5px;
+  align-items: center;
+  color: var(--tg-theme-text-color);
+}
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  background: #e74c3c;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
