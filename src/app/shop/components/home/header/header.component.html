@@ -1,0 +1,46 @@
+<nav>
+  <div class="nav">
+    <div class="container">
+      <div class="nav-row">
+
+      <div class="hamburger" (click)="setSate()"><mat-icon>menu</mat-icon></div>
+        <ng-container *ngIf="isLoggedIn; else login">
+      <a class="user"  routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+
+            <span >USER</span>
+            <mat-icon>person</mat-icon>
+
+
+      </a>
+        </ng-container>
+        <ng-template #login>
+          <a class="user" routerLink="/login" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+
+          <span><mat-icon>exit_to_app</mat-icon></span>
+          </a>
+
+        </ng-template>
+
+
+      </div>
+    </div>
+  </div>
+</nav>
+<div  class="menu">
+  <ul  [@open]="state">
+    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><mat-icon>home</mat-icon>Главная</a></li>
+    <li><a  routerLink="/sales" routerLinkActive="active"><mat-icon>percent</mat-icon>Скидки</a></li>
+    <ng-container *ngIf="isLoggedIn; else loginIn">
+    <li><a  routerLink="/buy-list" routerLinkActive="active"><mat-icon>list</mat-icon>Список заказов</a></li>
+
+    <li><a  routerLink="/user" routerLinkActive="active"><mat-icon>person</mat-icon>Профиль</a></li>
+    <li><a (click)="unLongin()" routerLink="/" routerLinkActive="active"><mat-icon>exit_to_app</mat-icon><span>Выход</span></a></li>
+    </ng-container>
+  </ul>
+
+  <ng-template #loginIn>
+    <li><a  routerLink="/login" routerLinkActive="active"><mat-icon>exit_to_app</mat-icon>Вход</a></li>
+
+
+  </ng-template>
+</div>

@@ -1,11 +1,17 @@
+
+
 *, *:after, *:before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
-html{
-  height: 100%;}
+html, body{
+  height: 100%;
+}
+
 body {
+
   background: var(--tg-theme-bg-color);
   width: 100vw;
   display: flex;
@@ -13,8 +19,10 @@ body {
   letter-spacing: -0.5px;
   align-items: center;
   color: var(--tg-theme-text-color);
+  overflow-x: hidden;
 }
 .container {
+  min-width: 300px;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
@@ -29,3 +37,7 @@ body {
   border: none;
   border-radius: 10px;
 }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

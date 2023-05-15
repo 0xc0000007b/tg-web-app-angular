@@ -1,0 +1,106 @@
+@import "../../../../../assets/colors";
+
+nav {
+
+  background: white;
+  border-radius: 0  10px 10px ;
+  box-shadow: $shadow;
+}
+
+.nav  {
+
+  overflow: hidden;
+  color: $primary;
+  width: 100%;
+ align-items: center;
+  display: flex;
+  padding: 2px 5px;
+  height: 60px;
+&-row {
+
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  .user {
+
+    margin-left: 60%;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    justify-items: center;
+    justify-content: space-between;
+    transition: .3s all;
+    &:hover {
+      color:$hover;
+    }
+    span {
+      transition: .3s all;
+      color: $shadow-color;
+      margin-top: 1.5px;
+      width: 50px;
+      margin-right: 3px;
+      &:hover {
+        color: $hover;
+      }
+    }
+  }
+  .logo  {
+    display: flex;
+  }
+  .hamburger {
+    transition: .3s all;
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+}
+.menu {
+  z-index: 2;
+  ul {
+    list-style: none;
+  padding: 10px 5px;
+  background-color: $shadow-color;
+  max-width: 200px;
+
+  height: calc(100% - 40px);
+    border-radius: 0 10px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    a {
+      overflow: hidden;
+      display: flex;
+      width: 250px;
+      text-align: center;
+      padding: 3px 5px;
+      color: white;
+      text-decoration: none;
+      transition: all .3s;
+      .active {
+        color: $hover;
+      }
+      &:hover {
+
+        padding-left: 7px;
+        background: $hover-bg;
+      }
+      mat-icon {
+        margin-top: 1.3px;
+        font-size: 16px;
+      }
+    .active {
+      background: rgba(#eee, .6);
+      padding-left: 7px;
+    }
+    .login {
+      display: inline-flex;
+      mat-icom {
+        display: flex;
+        margin-top: 10px;
+      }
+    }
+    }
+  }
+}
