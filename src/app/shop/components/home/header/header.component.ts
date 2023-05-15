@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import {MatIconModule} from "@angular/material/icon";
 import {animate, state, style, transition, trigger} from "@angular/animations";
 import {RouterLink, RouterLinkActive} from "@angular/router";
-import {LoginService} from "../../login/services/login.service";
+
+import WebApp from "@twa-dev/sdk";
 
 @Component({
   selector: 'app-header',
@@ -18,23 +19,13 @@ import {LoginService} from "../../login/services/login.service";
       transition('opened<=>closed', animate(300))
     ])
   ],
-  providers: [LoginService]
+  providers: []
 })
-export class HeaderComponent implements OnInit{
-  public isLoggedIn!: boolean
+export class HeaderComponent{
 
-
-state: string = 'closed';
-setSate(): void {
-  this.state = this.state == 'closed' ? 'opened' : 'closed'
-}
-
-unLongin() {
-  localStorage.clear()
-  location.reload()
-}
-
-ngOnInit() {
-localStorage.getItem('token') !== null ? this.isLoggedIn = true : this.isLoggedIn = false
-}
+    state: string = 'closed';
+    setSate(): void {
+      this.state = this.state == 'closed' ? 'opened' : 'closed'
+    }
+  protected readonly WebApp = WebApp;
 }

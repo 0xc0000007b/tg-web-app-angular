@@ -5,5 +5,5 @@ import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
-  providers: [importProvidersFrom(RouterModule.forRoot(routes, {enableTracing: /localhost/.test(document.location.host)})), provideAnimations()]
+  providers: [importProvidersFrom(RouterModule.forRoot(routes)), provideAnimations()]
 };
