@@ -1,0 +1,78 @@
+@import "../../../../../assets/colors";
+$colors: #00b894, #16a085, #e67e22, #3498db,
+#9b59b6,#303952,#ff3f34, #575fcf,
+#00cec9, #fdcb6e, #6c5ce7,#e84393, #636e72,
+#786fa6, #cf6a87, #e77f67, #574b90,
+#05c46b, #f53b57, #ba3f77, #b4ba42,
+#1b4a46, #a36f3b, #813a38, #3da9b3
+;
+$repeat: 20;
+@for $i from 1 through $repeat {
+  .image {
+    background-color: lighten(nth($colors, random(length($colors))), 0%);
+  }
+}
+.user-page {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  .user-image {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    .image {
+      width: 100%;
+    }
+  }
+  .username {
+    margin-top: 10px;
+    color: #eee;
+    display: flex;
+    margin-left: -130px;
+    a {
+      position: relative;
+      text-decoration: none;
+      color: $color;
+      transition: .3s all;
+
+    &:after {
+      bottom: -2px;
+
+      position: absolute;
+      background: #eee;
+      content: '';
+      transition: .2s all;
+      left: 0;
+    }
+    &:hover:after {
+      width: 100%;
+      height: 2px;
+
+    }
+    }
+
+  }
+  .orders {
+    li {
+      border-radius: 10px;
+      max-width: 300px;
+      margin-top: 10px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      background: white;
+      box-shadow: 1px 1px 1px black;
+      h3 {
+        font-size: 19px;
+        color: $color;
+      }
+      img {
+        max-width: 300px;
+        border-radius: 10px 10px 0 0;
+      }
+    }
+  }
+}

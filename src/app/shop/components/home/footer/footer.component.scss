@@ -1,4 +1,12 @@
+@import "../../../../../assets/colors";
+
+nav {
+
+  width: 100%;
+
+}
 .nav {
+  width: 350px;
   box-shadow: rgba(0,0,0, .6) 0 -2px  2px;
   display: flex;
   justify-content: center;
@@ -6,15 +14,19 @@
   align-items: center;
   margin-top: 5px;
  height: 40px;
+
   ul {
+
     display: flex;
     justify-content: space-between;
-    margin-right: 50px;
+    z-index: -2;
+
     li {
       display: flex;
-      margin-left: 50px;
+
       a {
         position: relative;
+
         color: #eee;
         display: block;
         transition: all .3s;
@@ -55,7 +67,9 @@
         &:hover:after {
           width: 12.5px;
         }
-
+        .active {
+          color: #3498db;
+        }
       }
     }
   }

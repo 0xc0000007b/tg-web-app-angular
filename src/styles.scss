@@ -22,10 +22,12 @@ body {
   overflow-x: hidden;
 }
 .container {
-  min-width: 300px;
-  max-width: 1200px;
+
+  max-height: max-content;
+  min-width: 200px;
+  max-width: 350px;
   padding: 0 15px;
-  margin: 0 auto;
+  margin: -200px auto;
 }
 .close {
   position: absolute;

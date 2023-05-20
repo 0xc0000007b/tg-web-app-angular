@@ -1,1 +1,23 @@
-<p>user works!</p>
+<app-header></app-header>
+<div class="container">
+
+  <div class="user-page">
+    <div class="user-image">
+      <div class="image">
+
+      </div>
+    </div>
+    <div class="username">
+      <h1><a href="https://t.me/@{{WebApp.initDataUnsafe.user?.username}}">{{WebApp.initDataUnsafe.user?.first_name}}</a></h1>
+    </div>
+    <div class="orders">
+      <h2>Ваши заказы</h2>
+      <li *ngFor="let p of pizzas">
+        <img [src]="p.image">
+        <h3>название: {{p.name}}</h3>
+        <p>цена: {{p.price}}</p>
+      </li>
+    </div>
+  </div>
+
+</div>

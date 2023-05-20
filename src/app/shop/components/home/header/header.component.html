@@ -1,16 +1,14 @@
 <nav>
   <div class="nav">
     <div class="container">
+
       <div class="nav-row">
 
       <div class="hamburger" (click)="setSate()"><mat-icon>menu</mat-icon></div>
 
       <a class="user"  routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-
             <span >{{WebApp.initDataUnsafe.user?.first_name}}</span>
             <mat-icon>person</mat-icon>
-
-
       </a>
       </div>
     </div>
@@ -21,6 +19,7 @@
     <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><mat-icon>home</mat-icon>Главная</a></li>
     <li><a  routerLink="/sales" routerLinkActive="active"><mat-icon>percent</mat-icon>Скидки</a></li>
     <li><a  routerLink="/buy-list" routerLinkActive="active"><mat-icon>list</mat-icon>Список заказов</a></li>
+    <li><a  routerLink="/constructor" routerLinkActive="active"><mat-icon>create</mat-icon>создать свою</a></li>
 
     <li><a  routerLink="/user" routerLinkActive="active"><mat-icon>person</mat-icon>Профиль</a></li>
   </ul>

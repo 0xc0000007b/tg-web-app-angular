@@ -14,8 +14,8 @@ import WebApp from "@twa-dev/sdk";
   styleUrls: ['./header.component.scss'],
   animations: [
    trigger('open', [
-     state('opened', style({width:  200, visibility: 'visible'})),
-      state('closed', style({width:0,  visibility: 'hidden'})),
+     state('opened', style({width:  250, visibility: 'visible', zIndex: 10})),
+      state('closed', style({width:0,  visibility: 'hidden', zIndex: 0})),
       transition('opened<=>closed', animate(300))
     ])
   ],

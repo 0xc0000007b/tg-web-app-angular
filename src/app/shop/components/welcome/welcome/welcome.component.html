@@ -1,62 +1,32 @@
-<app-layout>
+
+<app-header></app-header>
 <div class="container">
-
+  <h1>Готовые пиццы</h1>
+    <p>На данной странице представлены все пиццы, который сейчас есть в наличии <br>
+    Вы можете выбрать одну из них или <br><button routerLink="/constructor">создать свою</button></p>
+  <button routerLink="/form" class="main-btn">заполнить форму</button>
     <button (click)="close()" class="close">X</button>
-    <div class="product-card">
+    <div class="product-card" *ngFor="let p of pizzass">
 
-      <div class="product-img"></div>
+      <div class="product-img">
+        <img [src]="p.image" alt="">
+      </div>
       <div class="product-description">
-        <h2>burger</h2>
-        <p>simple burger</p>
+        <h2>{{p.type}}</h2>
+        <p>{{p.desc}}</p>
       </div>
       <div class="product-buttons">
-        <button class="order">Заказать</button>
-        <button class="reject">Отмена</button>
+        <button class="order" (click)="addToCartMar(p.data)">Заказать</button>
       </div>
 
     </div>
-    <div class="product-card">
 
-      <div class="product-img"></div>
-      <div class="product-description">
-        <h2>burger</h2>
-        <p>simple burger</p>
-      </div>
-      <div class="product-buttons">
-        <button class="order">Заказать</button>
-        <button class="reject">Отмена</button>
-      </div>
 
-    </div>
-    <div class="product-card">
 
-      <div class="product-img"></div>
-      <div class="product-description">
-        <h2>burger</h2>
-        <p>simple burger</p>
-      </div>
-      <div class="product-buttons">
-        <button class="order">Заказать</button>
-        <button class="reject">Отмена</button>
-      </div>
-
-    </div>
-    <div class="product-card">
-
-      <div class="product-img"></div>
-      <div class="product-description">
-        <h2>burger</h2>
-        <p>simple burger</p>
-      </div>
-      <div class="product-buttons">
-        <button class="order">Заказать</button>
-        <button class="reject">Отмена</button>
-      </div>
-
-    </div>
 </div>
 
-</app-layout>
+
+
 
 
 

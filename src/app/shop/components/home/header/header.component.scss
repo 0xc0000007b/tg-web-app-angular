@@ -1,29 +1,29 @@
 @import "../../../../../assets/colors";
 
 nav {
-
-  background: white;
   border-radius: 0  10px 10px ;
   box-shadow: $shadow;
 }
 
 .nav  {
-
+  width: 300px;
   overflow: hidden;
   color: $primary;
-  width: 100%;
+
+
  align-items: center;
   display: flex;
   padding: 2px 5px;
   height: 60px;
 &-row {
 
+
   display: flex;
   justify-content: space-between;
   column-gap: 20px;
   .user {
     color: #eee;
-    margin-left: 60%;
+    margin-left: 50%;
     display: flex;
     flex: 1;
     text-align: center;
@@ -35,9 +35,8 @@ nav {
     }
     span {
       display: flex;
-
+      color: var(--tg-theme-text-color);
       transition: .3s all;
-      color: $shadow-color;
       margin-top: 1.5px;
       width: 50px;
       margin-right: 40px;
@@ -51,6 +50,7 @@ nav {
     display: flex;
   }
   .hamburger {
+    margin-left: -20px;
     transition: .3s all;
     &:hover {
       color: $hover;
@@ -59,23 +59,23 @@ nav {
 }
 }
 .menu {
-  z-index: 2;
+  position: relative;
   ul {
+    position: relative;
     list-style: none;
   padding: 10px 5px;
   background-color: $shadow-color;
   max-width: 200px;
-
   height: calc(100% - 40px);
     border-radius: 0 10px;
-
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     a {
+      z-index: 1000;
       overflow: hidden;
       display: flex;
-      width: 250px;
+      width: 190px;
       text-align: center;
       padding: 3px 5px;
       color: white;
